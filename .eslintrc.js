@@ -17,5 +17,6 @@ module.exports = {
     "comma-dangle": "off",
     // 允许方法后面不加空格
     "space-before-function-paren": "off"  
-  }
+  },
+  ignorePatterns: ["public/"], 
 }

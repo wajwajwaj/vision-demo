@@ -5,6 +5,8 @@ import store from './store'
 import * as echarts from 'echarts'
 import axios from 'axios'
 import './assets/css/global.less'
+import chalkTheme from '../public/static/theme/chalk.json'
+import vintageTheme from '../public/static/theme/vintage.json'
 
 // 请求基准路径的配置（请求的前缀）
 axios.defaults.baseURL = 'http://localhost:8888/api/'
@@ -12,7 +14,8 @@ axios.defaults.baseURL = 'http://localhost:8888/api/'
 Vue.prototype.$http = axios
 Vue.prototype.$echarts = echarts
 
-Vue.config.productionTip = false
+echarts.registerTheme('vintage', vintageTheme)
+echarts.registerTheme('chalk', chalkTheme)
 
 new Vue({
   router,
